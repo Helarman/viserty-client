@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "FuturaBookC";
+    src: url("../../src/fonts/FuturaBookC.woff") format("woff"), url("../../src/fonts/FuturaBookC.eot") format("eot");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FuturaMediumC";
+    src: url("../../src/fonts/FuturaMediumC.woff") format("woff"), url("../../src/fonts/FuturaMediumC.eot") format("eot");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.menuRequest {
+    background-color: #2a2a2a;
+    padding-bottom: 37px;
+}
+
+.requestHeader {
+    margin-top: 110px;
+
+    h1 {
+        font-family: 'FuturaMediumC', roboto, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 49px;
+        line-height: 61px;
+        letter-spacing: 0.145em;
+        color: #2A2A2A;
+        text-transform: uppercase;
+    }
+}
+
+.requestUnderheader {
+    margin-top: 25px;
+
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 125.1%;
+        letter-spacing: 0.03em;
+        color: #2A2A2A;
+    }
+}
+
+.requestLine {
+    position: relative;
+    width: 100px;
+    height: 1px;
+    background-color: #2a2a2a;
+    top: 21%;
+    left: -75%;
+    transform: rotate(90deg);
+}
+
+.requestForm {
+    margin-top: 110px;
+}
+
+.labelForm {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'FuturaMediumC', roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125.5%;
+    color: #2A2A2A;
+}
+
+.inputForm {
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+    border: 2px solid #2A2A2A;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    color: #2a2a2a;
+
+    &:placeholder {
+        color: #898989;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.connectForm {
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+    border: 2px solid #2A2A2A;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    color: #2a2a2a;
+    appearance: none;
+    background: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+.requestSelect {
+    position: relative;
+}
+
+.selectArrow {
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    pointer-events: none;
+}
+
+.descriptionForm {
+    display: block;
+    width: 100%;
+    resize: none;
+    margin-bottom: 28px;
+    border: 2px solid #2A2A2A;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    color: #2a2a2a;
+
+    &:placeholder {
+        color: #898989;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.buttonForm {
+    display: block;
+    width: 100%;
+    background: transparent;
+    padding: 8px 16px;
+    font-family: 'FuturaMediumC', roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: #2A2A2A;
+    transition: all 0.5s;
+    margin-bottom: 100px;
+
+    &:hover {
+        background-color: #2a2a2a;
+        color: white;
+    }
+}
+.requestContacts{
+	margin-top: 50px;
+	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.mailContacts, .phoneContacts, .vkContacts, .tgContacts, .waContacts{
+	cursor: pointer;
+	margin-bottom: 8px;
+	&:hover a{
+		color: #898989;
+	}
+	svg{
+        fill: #2A2A2A;
+		margin-top: -11px;
+	}
+	a{
+		position: relative;
+		margin-left: 5px;
+		display: inline-block;
+		text-decoration: none;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 23px;
+		line-height: 125.5%;
+		color: #2A2A2A;
+		margin-bottom: 0;
+		transition: all .2s;
+    }
+    svg:hover #vk, svg:hover #tg, svg:hover #wa, svg:hover #mail, svg:hover #phone {
+    transition: 0.2s;
+    transition-timing-function: ease-in-out; 
+    fill: #898989;
+    }
+}
+
+.phoneContacts{
+	margin-bottom: 5px;
+}
+.mailContacts{
+	svg{
+		margin-top: -9px;
+	}
+}
+.vkContacts{
+	svg{
+		margin-top: -5px;
+	}
+}
+.vkContacts:hover .hover{
+	transition: 0.2s;
+	transition-timing-function: ease-in-out; 
+	fill: #898989;
+}
+.tgContacts:hover .hover{
+	transition: 0.2s;
+	transition-timing-function: ease-in-out; 
+	fill: #898989;
+}
+.waContacts:hover .hover{
+	transition: 0.2s;
+	transition-timing-function: ease-in-out; 
+	fill: #898989;
+}
+.mailContacts:hover .hover{
+	transition: 0.2s;
+	transition-timing-function: ease-in-out; 
+	fill: #898989;
+}
+.phoneContacts:hover .hover{
+	transition: 0.2s;
+	transition-timing-function: ease-in-out; 
+	fill: #898989;
+}
