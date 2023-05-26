@@ -21,9 +21,9 @@ export const getServerSideProps = async ({ query }) => {
     const def = +size === 1 ? 0 : (+size) //default items quantity per page for request
 
     const [res1, res2, res3] = await Promise.all([
-        fetch(`http://localhost:1337/api/global?populate=*`),
-        fetch(`http://localhost:1337/api/reviews?pagination[page]=${start}&pagination[pageSize]=${def}`),
-        fetch(`http://localhost:1337/api/review-page?populate=*`)
+        fetch(`https://admin.viserty.ru/api/global?populate=*`),
+        fetch(`https://admin.viserty.ru/api/reviews?pagination[page]=${start}&pagination[pageSize]=${def}`),
+        fetch(`https://admin.viserty.ru/api/review-page?populate=*`)
     ]);
 
     const [data1, data2, data3] = await Promise.all([
