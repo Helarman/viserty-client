@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown'
 
 export const getStaticProps = async () => {
     const [res1, res2] = await Promise.all([
-      fetch(`http://localhost:1337/api/global?populate=*`),
-      fetch(`http://localhost:1337/api/legal-info?populate=*`),
+      fetch(`https://admin.viserty.ru/api/global?populate=*`),
+      fetch(`https://admin.viserty.ru/api/legal-info?populate=*`),
     ]);
   
     const [data1, data2] = await Promise.all([

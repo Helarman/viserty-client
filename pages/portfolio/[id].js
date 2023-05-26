@@ -21,9 +21,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { id } = context.params;
   const [res1, res2, res3] = await Promise.all([
-    fetch(`http://localhost:1337/api/portfolio/${id}?populate=deep,3`), // individual page data
-    fetch(`http://localhost:1337/api/global?populate=*`), // global data
-    fetch(`http://localhost:1337/api/portfolio?fields[0]=id`) // only id data to calc
+    fetch(`https://admin.viserty.ru/api/portfolio/${id}?populate=deep,3`), // individual page data
+    fetch(`https://admin.viserty.ru/api/global?populate=*`), // global data
+    fetch(`https://admin.viserty.ru/api/portfolio?fields[0]=id`) // only id data to calc
   ]);
 
   const [data1, data2, data3] = await Promise.all([

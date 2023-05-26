@@ -85,7 +85,7 @@ const Portfolio = ({ posts, global, tags, }) => {
                 <div style={{ background: `${attributes.background}`, border: `${attributes.borderWidth}px solid ${attributes.borderColor}` }} className={styles.card}>
                   <div className={styles.logoCard}>
                     <object>
-                      <img src={`http://localhost:1337${attributes.previewSvg.data.attributes.url}`} ></img>
+                      <img src={`https://admin.viserty.ru${attributes.previewSvg.data.attributes.url}`} ></img>
                     </object>
                   </div>
 
@@ -114,9 +114,9 @@ const Portfolio = ({ posts, global, tags, }) => {
 
 export const getStaticProps = async () => {
   const [res1, res2, res3] = await Promise.all([
-    fetch(`http://localhost:1337/api/portfolio?populate=*`),
-    fetch(`http://localhost:1337/api/global?populate=*`),
-    fetch(`http://localhost:1337/api/tags?fields[0]=value&fields[1]=count`)
+    fetch(`https://admin.viserty.ru/api/portfolio?populate=*`),
+    fetch(`https://admin.viserty.ru/api/global?populate=*`),
+    fetch(`https://admin.viserty.ru/api/tags?fields[0]=value&fields[1]=count`)
   ]);
 
   const [data1, data2, data3] = await Promise.all([

@@ -93,10 +93,10 @@ export default Add;
 export const getServerSideProps = async ({ query }) => {
   const { code = 1 } = query; //default code
   const [res1, res2, res3, res4] = await Promise.all([
-    fetch(`http://localhost:1337/api/global?populate=*`),
-    fetch(`http://localhost:1337/api/review-page?populate=*`),
-    fetch(`http://localhost:1337/api/portfolio?fields[0]=uuid`),
-    fetch(`http://localhost:1337/api/reviews?fields[0]=code`)
+    fetch(`https://admin.viserty.ru/api/global?populate=*`),
+    fetch(`https://admin.viserty.ru/api/review-page?populate=*`),
+    fetch(`https://admin.viserty.ru/portfolio?fields[0]=uuid`),
+    fetch(`https://admin.viserty.ru/reviews?fields[0]=code`)
   ]);
 
   const [data1, data2, data3, data4] = await Promise.all([

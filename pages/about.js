@@ -15,8 +15,8 @@ import Footer from "@/components/Footer/Footer";
 
 export const getStaticProps = async () => {
     const [res1, res2] = await Promise.all([
-        fetch(`http://localhost:1337/api/global?populate=*`),
-        fetch(`http://localhost:1337/api/about-page?populate=*`),
+        fetch(`https://admin.viserty.ru/api/global?populate=*`),
+        fetch(`https://admin.viserty.ru/api/about-page?populate=*`),
     ]);
 
     const [data1, data2] = await Promise.all([

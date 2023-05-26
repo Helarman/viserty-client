@@ -10,8 +10,8 @@ import NavbarSecondary from '@/components/Navbar/NavbarSecondary';
 
 export const getStaticProps = async () => {
   const [res1, res2] = await Promise.all([
-    fetch(`http://localhost:1337/api/request?populate=*`),
-    fetch(`http://localhost:1337/api/global?populate=*`),
+    fetch(`https://admin.viserty.ru/api/request?populate=*`),
+    fetch(`https://admin.viserty.ru/api/global?populate=*`),
   ]);
 
   const [data1, data2,] = await Promise.all([

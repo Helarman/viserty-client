@@ -54,7 +54,7 @@ const NewReview = ({ inCode, page }) => {
 
         e.preventDefault();
 
-        const response = await fetch(`http://localhost:1337/api/reviews?populate=*`, {
+        const response = await fetch(`https://admin.viserty.ru/api/reviews?populate=*`, {
             method: 'POST',
             headers,
             body: JSON.stringify({
