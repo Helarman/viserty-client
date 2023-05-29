@@ -85,7 +85,7 @@ const Portfolio = ({ posts, global, tags, }) => {
                 <div style={{ background: `${attributes.background}`, border: `${attributes.borderWidth}px solid ${attributes.borderColor}` }} className={styles.card}>
                   <div className={styles.logoCard}>
                     <object>
-                      <img src={`https://admin.viserty.ru${attributes.previewSvg.data.attributes.url}`} ></img>
+                      <img src={attributes.previewSvg.data.attributes.url} ></img>
                     </object>
                   </div>
 

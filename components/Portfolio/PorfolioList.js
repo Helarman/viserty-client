@@ -18,7 +18,6 @@ const PortfolioList = ({ posts, tags, }) => {
 	const cards = posts.data;
 	const tagsList = tags.data;
 	const tagsData = tagsList.map(({ attributes: { value, count }, ...item }) => ({ ...item, value: value, count: count }));
-
 	const handleTags = (values) => {
 		console.log(values);
 	}
@@ -57,7 +56,7 @@ const PortfolioList = ({ posts, tags, }) => {
 						<div style={{ background: `${attributes.background}`, border: `${attributes.borderWidth}px solid ${attributes.borderColor}` }} className={styles.card}>
 							<div className={styles.logoCard}>
 								<object>
-									<img src={`http://localhost:1337${attributes.previewSvg.data.attributes.url}`} ></img>
+									<img src={attributes.previewSvg.data.attributes.url} ></img>
 								</object>
 							</div>
 

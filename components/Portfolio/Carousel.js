@@ -48,7 +48,7 @@ const Carousel = ({cards}) => {
 					<Link href={`/portfolio/${id}`}>
 						<div style={{ background: `${attributes.background}`, border: `${attributes.borderWidth}px solid ${attributes.borderColor}` }} className={styles.card}>
 							<div className={styles.logoCard}>
-								<img src={`http://localhost:1337${attributes.previewSvg.data.attributes.url}`}></img>
+								<img src={attributes.previewSvg.data.attributes.url}></img>
 							</div>
 							<div className={styles.darken}>
 								<div className={styles.cardDescription}>

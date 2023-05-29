@@ -5,7 +5,7 @@ import NavbarSecondary from '@/components/Navbar/NavbarSecondary';
 
 
 export const getStaticPaths = async () => {
-  const response = await fetch(`http://localhost:1337/api/portfolio?populate=*`);
+  const response = await fetch(`https://admin.viserty.ru/api/portfolio?populate=*`);
   const data = await response.json();
 
   const paths = data.data.map(({ id }) => ({

@@ -7,6 +7,7 @@ import Carousel from "./Carousel"
 
 const Portfolio = ({ portfolio }) => {
 	const cards = portfolio;
+	console.log(cards)
 	return (
 		<div className={styles.portfolio}>
 			<div className={`container`}>
