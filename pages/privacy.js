@@ -3,7 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import ReactMarkdown from 'react-markdown'
 
 
-export const getStaticProps = async () => {
+/*export const getStaticProps = async () => {
     const [res1, res2] = await Promise.all([
       fetch(`https://admin.viserty.ru/api/global?populate=*`),
       fetch(`https://admin.viserty.ru/api/legal-info?populate=*`),
@@ -18,12 +18,12 @@ export const getStaticProps = async () => {
       props: { global: data1, legal: data2},
   
     }
-  };
+  };*/
   
-const Privacy = ({global, legal}) =>{
+const Privacy = (/*{global, legal}*/) =>{
     return(
         <>
-            <NavbarSecondary global={global}/>
+            {/*<NavbarSecondary global={global}/>
 
             <div style={{marginTop: `50px`, marginBottom: `50px` }} className={`container`}>
                 <div className={`row`}>
@@ -31,7 +31,7 @@ const Privacy = ({global, legal}) =>{
                 </div>
             </div>
 
-            <Footer global={global}/>
+            <Footer global={global}/>*/}
         </>
     )
 }
