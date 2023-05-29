@@ -7,7 +7,8 @@ import styles from '@/components/Reviews/feedbackform.module.scss'
 
 const Add = ({ qCode, global, pageData, portfolio, usedData }) => {
 
-  {/*const uuidData = portfolio.data.map(({ attributes: { uuid }, ...item }) => (uuid));//get universally unique identifiers for projects
+  console.log(pageData)
+  const uuidData = portfolio.data.map(({ attributes: { uuid }, ...item }) => (uuid));//get universally unique identifiers for projects
   const uuidInclude = uuidData.includes(`${qCode}`); // check uuid exists
 
   const usedCodes = usedData.data.map(({ attributes: { code }, ...item }) => (code));//get existing review codes 
@@ -58,7 +59,7 @@ const Add = ({ qCode, global, pageData, portfolio, usedData }) => {
         />
       </>
     )
-  }*/}
+  }
   
   return (
     <div>
@@ -77,7 +78,7 @@ const Add = ({ qCode, global, pageData, portfolio, usedData }) => {
               <h1>{pageData.formTitle}</h1>
               <p>{pageData.formDescription}</p>
             </div>
-            {/*<Form inCode={qCode} page={pageData.data.attributes} />*/}
+            <Form inCode={qCode} page={pageData.data.attributes} />
           </div>
         </div>
       </div>
@@ -94,8 +95,8 @@ export const getServerSideProps = async ({ query }) => {
   const [res1, res2, res3, res4] = await Promise.all([
     fetch(`https://admin.viserty.ru/api/global?populate=*`),
     fetch(`https://admin.viserty.ru/api/review-page?populate=*`),
-    fetch(`https://admin.viserty.ru/portfolio?fields[0]=uuid`),
-    fetch(`https://admin.viserty.ru/reviews?fields[0]=code`)
+    fetch(`https://admin.viserty.ru/api/portfolio?fields[0]=uuid`),
+    fetch(`https://admin.viserty.ru/api/reviews?fields[0]=code`)
   ]);
 
   const [data1, data2, data3, data4] = await Promise.all([

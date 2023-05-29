@@ -36,7 +36,6 @@ const headers = {
 
 const NewReview = ({ inCode, page }) => {
     const connectType = page.connectType;
-    console.log(page.connectType)
 
     const code = inCode.toString();
     const [name, setName] = useState('');
@@ -48,7 +47,7 @@ const NewReview = ({ inCode, page }) => {
     const handleName = e => { setName(e.target.value); }
     const handleOrganization = e => { setOrganization(e.target.value); }
     const handleText = e => { setText(e.target.value); }
-    const handleConnectionType = e => { setConnectionType(e.target.value); }
+    const handleConnectionType = e => {setConnectionType(e.target.value); }
     const handleConnect = e => { setConnect(e.target.value); }
 
     const handleSubmit = async e => {
@@ -81,15 +80,15 @@ const NewReview = ({ inCode, page }) => {
                 <label className={styles.labelForm}>{page.nameLabel}</label>
                 <input className={`${styles.inputForm} ${styles.nameInput}`} type="text" name="name" placeholder={page.namePlaceholder} value={name} onChange={handleName} required />
                 <label className={styles.labelForm}>{page.orgLabel}</label>
-                <input className={`${styles.inputForm} ${styles.nameInput}`} type="text" name="organization" placeholder={`“${page.orgPlaceholder}”`} value={organization} onChange={handleOrganization} />
+                <input className={`${styles.inputForm} ${styles.nameInput}`} type="text" name="organization" placeholder={`${page.orgPlaceholder}`} value={organization} onChange={handleOrganization} />
                 <label className={styles.labelForm}>{page.connectLabel}</label>
                 <div className={styles.requestSelect}>
                     <div className={styles.selectArrow}>
                         <RequestArrow />
                     </div>
                     <select className={styles.connectForm} name="connectionType" value={connectionType} onChange={handleConnectionType}>
-                        {connectType.map(({ id, connectTypeLabel, type }) => (
-                            <option key={id} value={type}>{connectTypeLabel}</option>
+                        {connectType.map(({ id, connectTypeLabel, value }) => (
+                            <option key={id} value={value}>{connectTypeLabel}</option>
                         ))}
                     </select>
                 </div>
@@ -139,6 +138,13 @@ const NewReview = ({ inCode, page }) => {
                 </div>
 
                 <button className={styles.buttonForm} type="submit">Отправить</button>
+
+                {/*<p>{code}</p> 
+                <p>{name}</p>
+                <p>{organization}</p>
+                <p>{text}</p>
+                <p>{connectionType}</p>
+                <p>{connect}</p>*/}
             </form>
         </div>
 
