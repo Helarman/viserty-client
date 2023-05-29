@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Form from "@/pages/reviews/Form"
+import Form from "@/components/Reviews/Form"
 import Error from "@/components/Error/Error"
 import NavbarSecondary from "@/components/Navbar/NavbarSecondary";
 import Footer from "@/components/Footer/Footer";
@@ -7,7 +7,6 @@ import styles from '@/components/Reviews/feedbackform.module.scss'
 
 const Add = ({ qCode, global, pageData, portfolio, usedData }) => {
 
-  console.log(pageData)
   const uuidData = portfolio.data.map(({ attributes: { uuid }, ...item }) => (uuid));//get universally unique identifiers for projects
   const uuidInclude = uuidData.includes(`${qCode}`); // check uuid exists
 
