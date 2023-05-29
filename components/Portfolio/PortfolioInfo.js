@@ -87,8 +87,8 @@ const PortfolioInfo = ({ post, numbers }) => {
   const itemTags = itemInfo.data.attributes.tags;
   const itemClient = itemInfo.data.attributes.client;
   const itemYear = itemInfo.data.attributes.year;
-  const mainImage = itemInfo.data.attributes.mainImage;
-  const mainImageUrl = `http://localhost:1337${mainImage.data.attributes.url}`;
+  const mainImage = itemInfo.data.attributes.mainImage ;
+  const mainImageUrl = mainImage.data.attributes.url;
   const itemDiscussList = itemInfo.data.attributes.discussList;
   const itemSolutionList = itemInfo.data.attributes.solutionList;
   const itemBlock = itemInfo.data.attributes.block;
@@ -172,9 +172,9 @@ const PortfolioInfo = ({ post, numbers }) => {
               <div className={`col-xl-10 offset-xl-1`}>
                 <div className={styles.mapImg}>
                   {images.data && images.data.map(({ id, attributes }) => (
-                    <img key={id} src={`http://localhost:1337${attributes.url}`} alt="map"></img>
+                    <img key={id} src={attributes.url} alt="map"></img>
                   ))
-                  }
+                  } 
                 </div>
               </div>
             </div>
