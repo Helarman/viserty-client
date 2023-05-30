@@ -28,7 +28,7 @@ const AboutCounters = ({ counters }) => {
                 <div className={`col-xl-10 offset-xl-1 col-lg-12`}>
                     <div className={styles.counters}>
                         <ul ref={ref}>
-                            {counters && counters.map(({ id, number, description, time, }) => (
+                            {counters && counters.map(({ id, number, description, time }) => (
                                 <li key={id}><h1><Counter val={number} time={time} /></h1><p>{description}</p></li>
                             ))}
                             <li className={styles.helper}></li>
