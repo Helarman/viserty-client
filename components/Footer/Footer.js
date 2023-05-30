@@ -84,13 +84,13 @@ const Footer = (global) => {
 								<p>Контакты</p>
 								<a href={email.emailLink}>{email.email}</a>
 								<a href={phone.phoneLink}>{phone.phone}</a>
-								<a prefetch={false} href={`//${socialLinks.vkLink}`} >
+								<a prefetch={false} href={`${socialLinks.vkLink}`} >
 									<Vk />
 								</a>
-								<a prefetch={false} href={`//${socialLinks.tgLink}`}>
+								<a prefetch={false} href={`${socialLinks.tgLink}`}>
 									<Tg />
 								</a>
-								<a prefetch={false} href={`//${socialLinks.waLink}`}>
+								<a prefetch={false} href={`${socialLinks.waLink}`}>
 									<Wa />
 								</a>
 							</ul>
